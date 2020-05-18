@@ -1,0 +1,24 @@
+{
+  "name": "minin-aplication-forms",
+  "version": "1.0.0",
+  "description": "Telegram: https://teleg.one/js_by_vladilen\r Instagram: https://www.instagram.com/vladilen.minin\r VK: https://vk.com/vladilen.minin\r Группа VK: https://vk.com/js_by_vladilen",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wascoyur/minin-aplication-forms.git"
+  },
+  "keywords": [
+    "js",
+    "minin",
+    "vladilen"
+  ],
+  "author": "wascoyur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wascoyur/minin-aplication-forms/issues"
+  },
+  "homepage": "https://github.com/wascoyur/minin-aplication-forms#readme"
+}
