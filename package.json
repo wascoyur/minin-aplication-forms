@@ -4,7 +4,7 @@
   "description": "Telegram: https://teleg.one/js_by_vladilen\r Instagram: https://www.instagram.com/vladilen.minin\r VK: https://vk.com/vladilen.minin\r Группа VK: https://vk.com/js_by_vladilen",
   "main": "app.js",
   "scripts": {
-    "start": "npm --mode development --open",
+    "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/wascoyur/minin-aplication-forms#readme",
   "devDependencies": {
-    "html-webpack-plugin": "^4.3.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
