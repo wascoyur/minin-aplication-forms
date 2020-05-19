@@ -19,11 +19,11 @@ function submitFormHandler (event){
 		//Азинхронный заппрос на сервер для сохранения вопроса
 		Question.create(question)
 			.then(() => {
-							
-						})
-		console.log(question);
-		input.value = '';
-		input.classList.remove('mui--is-not-empty');
-		btnSend.disabled = false;
+				// console.log(question);
+				input.value = '';
+				input.classList.remove('mui--is-not-empty');
+				btnSend.disabled = false;				
+			})
+		
 	}
 }
