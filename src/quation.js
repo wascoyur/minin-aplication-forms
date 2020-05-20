@@ -16,9 +16,8 @@ export class Question{
 	}
 	static renderList(){
 		const questions = getQuestionsFromLocalStorage();
-		const html =questions.length
-			? questions.map(toCard).join(''):
-			<div class="mui--text-headline">test</div>
+		const html = questions.length ? questions.map(toCard).join(''): <div class="mui--text-headline">test</div>;
+
 	}
 }
 function addToLocalStorage(quation) {
