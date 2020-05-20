@@ -16,7 +16,7 @@ function submitFormHandler (event){
 			date: new Date().toJSON(),
 		}
 		btnSend.disabled = true;
-		//Азинхронный заппрос на сервер для сохранения вопроса
+		//Аcинхронный заппрос на сервер для сохранения вопроса
 		Question.create(question)
 			.then(() => {
                 console.log(question);
