@@ -34,7 +34,10 @@ function getQuestionsFromLocalStorage() {
 }
 function toCard(question) {
 	return `
-	<div class="mui--text-black-54 mui--text-body2">Ваши вопросы</div>
-				<div class="mui-divider"></div>
-	`;
+		<div class="mui--text-black-54 mui--text-body2">
+		Дата: ${new Date(question.date).toLocaleDateString()}
+		</div>
+		<div class="mui-divider">${question.text}</div>
+		<br/>
+		`;
 }

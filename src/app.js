@@ -4,6 +4,7 @@ import {isValid} from './utils';
 const form = document.getElementById('form');
 const input = form.querySelector('#question-input');
 const btnSend = form.querySelector('#submit');
+window.addEventListener('load', Question.renderList)
 form.addEventListener('submit', submitFormHandler);
 input.addEventListener('input', () => {
 	btnSend.disabled = !isValid(input.value);
