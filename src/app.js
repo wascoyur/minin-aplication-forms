@@ -1,6 +1,7 @@
-import {Question} from './quation'
+import { Question } from './quation';
+import {getAuthForm} from'./auth';
 import './styles.css'
-import {isValid} from './utils';
+import {createModal, isValid} from './utils';
 const form = document.getElementById('form');
 const input = form.querySelector('#question-input');
 const btnSend = form.querySelector('#submit');
@@ -30,6 +31,17 @@ function submitFormHandler (event){
 
 	}
 }
+
 function openModal(params) {
-    
+	createModal('Авторизация', getAuthForm());
+	document
+		.getElementById('auth-form')
+		.addEventListener('submit', authFormHandler, {once: true})
+}
+function authFormHandler(event) {
+	event.preventDefault();
+
+	const email = event.target.querySelector('#email').value
+	const password = event.target.querySelector('#password').value
+	console.log(email, password);
 }
