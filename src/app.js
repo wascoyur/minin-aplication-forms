@@ -4,7 +4,9 @@ import {isValid} from './utils';
 const form = document.getElementById('form');
 const input = form.querySelector('#question-input');
 const btnSend = form.querySelector('#submit');
-window.addEventListener('load', Question.renderList)
+const modalBtn = document.getElementById('modal-btn')
+window.addEventListener('load', Question.renderList);
+modalBtn.addEventListener('click', openModal);
 form.addEventListener('submit', submitFormHandler);
 input.addEventListener('input', () => {
 	btnSend.disabled = !isValid(input.value);
@@ -27,4 +29,7 @@ function submitFormHandler (event){
             })
 
 	}
+}
+function openModal(params) {
+    
 }
