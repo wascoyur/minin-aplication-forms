@@ -24,3 +24,4 @@ PayPal: https://www.paypal.me/vladilenm
 
 #js #javascript #firebase
 Урок: Приложение на чистом JavaScript. Авторизация, сборка, деплой
+тестовая БД: https://console.firebase.google.com/u/0/project/podcast-wascoyur-app/database
