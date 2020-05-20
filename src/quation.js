@@ -20,6 +20,8 @@ export class Question{
 		const html = questions.length?questions.map(toCard)
 					.join(''):
 					`<div class="mui--text-headline">Ничего не спрашивалось</div>`;
+		const list = document.getElementById('list');
+		list.innerHTML = html;
 	}
 }
 function addToLocalStorage(question) {
@@ -31,5 +33,8 @@ function getQuestionsFromLocalStorage() {
 	return JSON.parse(localStorage.getItem('questions') || '[]');
 }
 function toCard(question) {
-
+	return `
+	<div class="mui--text-black-54 mui--text-body2">Ваши вопросы</div>
+				<div class="mui-divider"></div>
+	`;
 }
