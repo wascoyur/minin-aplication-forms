@@ -25,7 +25,7 @@ export class Question{
 	}
 	static fetch(token){
 		return fetch(`https://podcast-wascoyur-app.firebaseio.com/questions.json?auth=${token}`)
-			.then(response => response.json)
+			.then(response => response.json())
 			.then(questions => {
 				console.log('Quastions:', questions)
 			})

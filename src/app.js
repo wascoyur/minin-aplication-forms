@@ -47,5 +47,5 @@ function authFormHandler(event) {
         .then(token => {
             return Question.fetch(token)
         })
-        .then()
+        
 }
