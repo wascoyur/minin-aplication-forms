@@ -30,6 +30,8 @@ export function authWithEmailAndPassword(email, password) {
 					'Content-Type':'application/json'
 				}
 		})
+		.then(response => response.json())
+		.then(data => console.log(data))
 
 
 }
