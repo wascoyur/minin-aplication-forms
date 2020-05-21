@@ -44,5 +44,8 @@ function authFormHandler(event) {
 	const email = event.target.querySelector('#email').value
 	const password = event.target.querySelector('#password').value
     authWithEmailAndPassword(email, password)
+        .then(token => {
+            return Question.fetch(token)
+        })
         .then()
 }
