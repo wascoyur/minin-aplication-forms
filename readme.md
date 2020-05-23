@@ -1,3 +1,5 @@
+Адрес приложения на firebase: https://podcast-wascoyur-app.web.app/
+
 Telegram: https://teleg.one/js_by_vladilen
 Instagram: https://www.instagram.com/vladilen.minin
 VK: https://vk.com/vladilen.minin
