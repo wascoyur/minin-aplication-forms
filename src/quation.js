@@ -23,11 +23,20 @@ export class Question{
 		const list = document.getElementById('list');
 		list.innerHTML = html;
 	}
-	static fetch(token){
+	static fetch(token) {
+		if (!token) {
+			return Promise.resolve(`<p class="error">Не авторизован!</p>`)
+		}
 		return fetch(`https://podcast-wascoyur-app.firebaseio.com/questions.json?auth=${token}`)
 			.then(response => response.json())
-			.then(questions => {
-				console.log('Quastions:', questions)
+			.then(response => {
+				if (response.error) {
+					return `<p class="error">${response.error}</p>`
+				}
+				return response ? Object.keys(response).map(key => ({
+					...response[key],
+					id:key
+				})): []
 			})
 	}
 }

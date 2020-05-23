@@ -43,9 +43,14 @@ function authFormHandler(event) {
 
 	const email = event.target.querySelector('#email').value
 	const password = event.target.querySelector('#password').value
+	const btnSnd = event.target.querySelector('button');
+	btnSnd.disabled = true;
     authWithEmailAndPassword(email, password)
-        .then(token => {
-            return Question.fetch(token)
-        })
+        .then(Question.fetch)
+		.then(renderModalAfterAuth)
+		.then(() => btnSnd.disabled = false)
         
+}
+function renderModalAfterAuth(content) {
+	console.log('Content: ', content);
 }
