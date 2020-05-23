@@ -39,6 +39,12 @@ export class Question{
 				})): []
 			})
 	}
+	static listToHTML(questions) {
+		return questions.length ?
+		`<ol>${questions.map(q =>`<li> ${q.text}</li>`).join('')}</ol>`
+									: '<p>Вопросов пока нет</p>'
+	}
+	
 }
 function addToLocalStorage(question) {
 	const all = getQuestionsFromLocalStorage();
